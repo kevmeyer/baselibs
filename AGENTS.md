@@ -109,10 +109,10 @@ Rust (`.rs`), Python (`.py`), Starlark (`.bzl`), BUILD files — use `#` comment
 ### clang-tidy (C++)
 
 ```bash
-bazel build --config=clang_tidy -- //score/...
+bazel test --config=bl-x86_64-linux --config=clang-tidy -- //...
 ```
 
-Config: `.clang-tidy-minimal` at repo root.
+Config: `.clang-tidy` at repo root.
 
 ### Rust clippy
 

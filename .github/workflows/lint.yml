@@ -36,7 +36,7 @@ jobs:
         uses: eclipse-score/cicd-actions/setup-bazel-cache@659dcbed63f6b7fbde88c7850125ea0a0a92f939
         with:
           unique-cache-name: ${{ github.workflow }}-${{ github.job }}
-      - name: Bazel Build with clang-tidy
+      - name: Bazel Test with clang-tidy
         run: |
           bazel test --config=bl-x86_64-linux --config=clang-tidy -- //...
   lint-clippy:
